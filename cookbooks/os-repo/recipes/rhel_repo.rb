@@ -10,8 +10,7 @@ when '7'
         baseurl v['baseurl']
         gpgcheck v['gpgcheck']
         action :create
-        http_caching 'none'
-        make_cache false
+        #make_cache false
       end
     end
 
@@ -22,8 +21,7 @@ when '8'
         baseurl v['baseurl']
         gpgcheck v['gpgcheck']
         action :create
-        http_caching 'none'
-        make_cache false
+        #make_cache false
       end
     end
 
