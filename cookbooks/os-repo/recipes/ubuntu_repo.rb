@@ -10,6 +10,10 @@ when '22'
       end
     end
 
+  file '/etc/apt/sources.list' do
+     action :delete
+  end
+
 when '20'
   node[:software][:repos][:ubuntu_focal].each do |k, v|
       apt_repository v['name'] do
@@ -19,5 +23,9 @@ when '20'
         action :add
       end
     end
+
+  file '/etc/apt/sources.list' do
+     action :delete
+  end
 
 end
