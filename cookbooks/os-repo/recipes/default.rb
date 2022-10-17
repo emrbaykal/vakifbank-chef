@@ -11,10 +11,13 @@ when 'redhat'
 when 'centos'
   include_recipe 'os-repo::centos_repo'
 
-#when 'oracle'
-#  include_recipe 'os-repo::oracle_repo'
+when 'oracle'
+  include_recipe 'os-repo::oracle_repo'
 
-#when 'ubuntu'
-#    include_recipe 'ntp::ubuntu_chrony'
+when 'ubuntu'
+    include_recipe 'os-repo::ubuntu_repo'
+
+when 'debian'
+  include_recipe 'os-repo::debian_repo'
 
 end
