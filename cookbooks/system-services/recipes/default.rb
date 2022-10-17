@@ -5,12 +5,13 @@
 # Copyright:: 2022, The Authors, All Rights Reserved.
 
 case node['platform']
-when 'redhat'
+when 'redhat', 'centos', 'oracle'
   include_recipe 'system-services::rhel'
 
 
-when 'centos'
+when 'ubuntu', 'debian'
   # Find Red Hat release version
-  include_recipe 'system-services::rhel'
+  include_recipe 'system-services::ubuntu'
 
 end
+

@@ -5,16 +5,10 @@
 # Copyright:: 2022, The Authors, All Rights Reserved.
 
 case node['platform']
-when 'redhat'
+when 'redhat', 'centos', 'oracle'
   include_recipe 'additional-packages::rhel'
 
-when 'centos'
-  include_recipe 'additional-packages::rhel' 
-
-when 'oracle'
-  include_recipe 'additional-packages::rhel' 
-
-when 'ubuntu'
-    include_recipe 'additional-packages::ubuntu'
+when 'ubuntu', 'debian'
+  include_recipe 'additional-packages::ubuntu'
 
 end

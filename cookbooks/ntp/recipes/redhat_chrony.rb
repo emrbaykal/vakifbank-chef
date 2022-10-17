@@ -4,12 +4,12 @@
 #
 # Copyright:: 2019, The Authors, All Rights Reserved.
 
-  yum_package 'ntp' do
+  package 'ntp' do
     action :remove
     flush_cache [ :before ]
   end
 
-  yum_package 'chrony' do
+  package 'chrony' do
     action :install
     flush_cache [ :before ]
   end
