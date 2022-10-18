@@ -4,6 +4,6 @@
 <% end %>
 
 #Environment Spesific Variables
-<% if node[:chef_environment]=='RHEL-ENV' -%>
+<% if node[:chef_environment]=='db_servers' -%>
 kernel.shmmax=<%= ((node['memory']['total'][0..-3].to_i / 1024) * 0.75).to_i%>
 <% end -%>
