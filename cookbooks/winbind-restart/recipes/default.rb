@@ -4,8 +4,12 @@
 #
 # Copyright:: 2022, The Authors, All Rights Reserved.
 
-  service 'winbind' do
-   action [ :restart ]
-   only_if { node['packages'].keys.include?('samba-winbind') }
-   ignore_failure true
-  end
+
+case node['platform']
+  when 'redhat', 'centos', 'oracle'
+    include_recipe 'winbind-restart::redhat_winbind'
+
+  when 'ubuntu', 'debian'
+    include_recipe 'winbind-restart::ubuntu_winbind'
+
+end
