@@ -5,7 +5,7 @@ copyright: HPE
 copyright_email: emre.baykal@hpe.com
 license: Apache-2.0
 summary: An InSpec Compliance Profile
-version: 0.1.1
+version: 0.1.4
 supports:
   - platform-name: redhat
     release: 8.*
