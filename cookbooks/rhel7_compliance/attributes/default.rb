@@ -8,3 +8,5 @@ default['audit']['profiles']['RHEL7-Compliance'] = {
 default['audit']['fetcher'] = 'chef-automate'
 # Set reporter
 default['audit']['reporter'] = 'chef-automate'
+
+default['audit']['interval']['time'] = 1440 # twice a day, the default value

@@ -9,4 +9,4 @@ default['audit']['fetcher'] = 'chef-automate'
 # Set reporter
 default['audit']['reporter'] = 'chef-automate'
 
-#default['audit']['interval']['time'] = 1440 # twice a day, the default value
+default['audit']['interval']['time'] = 1440 # twice a day, the default value
