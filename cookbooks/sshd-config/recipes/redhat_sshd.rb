@@ -13,5 +13,5 @@
 
 
  service "sshd" do
-  #  action [ :enable ]
+    action [ :enable, :start ]
  end

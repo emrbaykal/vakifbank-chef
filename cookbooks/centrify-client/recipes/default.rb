@@ -9,6 +9,5 @@ when 'redhat', 'centos', 'oracle'
   include_recipe 'centrify-client::redhat-centrify'
 
 when 'ubuntu', 'debian'
-  # Find Oracle release version
     include_recipe 'centrify-client::ubuntu-centrify'
 end

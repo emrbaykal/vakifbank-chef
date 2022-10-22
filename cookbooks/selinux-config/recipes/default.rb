@@ -8,7 +8,7 @@ case node['platform']
 when 'redhat', 'centos', 'oracle'
   include_recipe 'selinux-config::redhat_selinux'
 
-#when 'ubuntu', 'debian'
-#    include_recipe 'sshd-config::ubuntu_sshd'
+when 'ubuntu', 'debian'
+    include_recipe 'selinux-config::ubuntu_selinux'
 
 end

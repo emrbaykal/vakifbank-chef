@@ -10,7 +10,6 @@ when 'redhat', 'centos', 'oracle'
 
 
 when 'ubuntu', 'debian'
-  # Find Red Hat release version
   include_recipe 'system-services::ubuntu'
 
 end
