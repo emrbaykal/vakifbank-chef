@@ -1,0 +1,263 @@
+{
+    "apache2": {
+        "listen_ports": [
+            "80",
+            "443"
+        ]
+    },
+    "ntp": {
+        "source": "10.254.254.10"
+    },
+    "package": {
+        "rhel7": {
+            "name": [
+                "bash-completion",
+                "chrony",
+                "motif",
+                "mailx",
+                "lsof",
+                "expect",
+                "postfix",
+                "telnet",
+                "sos",
+                "coreutils",
+                "wget",
+                "curl",
+                "perl",
+                "nfs-utils",
+                "net-tools",
+                "m4",
+                "tcpdump",
+                "bind-utils",
+                "sysstat",
+                "mesa-libGL",
+                "traceroute",
+                "vim-enhanced",
+                "unzip",
+                "bzip2",
+                "tar",
+                "rsync",
+                "man-pages"
+            ]
+        },
+        "rhel8": {
+            "name": [
+                "bash-completion",
+                "chrony",
+                "mailx",
+                "lsof",
+                "expect",
+                "postfix",
+                "sos",
+                "coreutils",
+                "wget",
+                "curl",
+                "perl",
+                "nfs-utils",
+                "net-tools",
+                "m4",
+                "tcpdump",
+                "libnsl",
+                "bind-utils",
+                "mesa-libGL",
+                "traceroute",
+                "vim-enhanced",
+                "unzip",
+                "bzip2",
+                "tar",
+                "rsync",
+                "man-pages"
+            ]
+        },
+        "ubuntu_focal": {
+            "name": []
+        },
+        "ubuntu_jammy": {
+            "name": [
+                "samba"
+            ]
+        }
+    },
+    "service": {
+        "rhel7": {
+            "state": {
+                "disabled": [
+                    "firewalld"
+                ],
+                "enabled": []
+            }
+        },
+        "rhel8": {
+            "state": {
+                "disabled": [
+                    "firewalld"
+                ],
+                "enabled": []
+            }
+        },
+        "ubuntu_focal": {
+            "state": {
+                "disabled": [],
+                "enabled": []
+            }
+        },
+        "ubuntu_jammy": {
+            "state": {
+                "disabled": [],
+                "enabled": []
+            }
+        }
+    },
+    "software": {
+        "repos": {
+            "oel7": {
+                "OL7_UEKR4": {
+                    "baseurl": "http://10.230.164.200/repository/ol7_UEKR4/",
+                    "description": "Oracle Linux 7 UEKR4 Repo",
+                    "gpgcheck": false,
+                    "name": "OL7_UEKR4"
+                },
+                "OL7_UEKR5": {
+                    "baseurl": "http://10.230.164.200/repository/ol7_UEKR5/",
+                    "description": "Oracle Linux 7 UEKR5 Repo",
+                    "gpgcheck": false,
+                    "name": "OL7_UEKR5"
+                },
+                "OL7_UEKR6": {
+                    "baseurl ": "http://10.230.164.200/repository/ol7_UEKR6/",
+                    "description": "Oracle Linux 7 UEKR6 Repo",
+                    "gpgcheck": "false",
+                    "name": "OL7_UEKR6"
+                },
+                "OL7_latest": {
+                    "baseurl": "http://10.230.164.200/repository/ol7_UEKR6/",
+                    "description": "Oracle Linux 7 Latest Repo",
+                    "gpgcheck": false,
+                    "name": "OL7_latest"
+                }
+            },
+            "rhel7": {
+                "RHEL7_BASE": {
+                    "baseurl": "http://lxchwork1.hpetrlab.local/repository/rhel7_base/",
+                    "description": "RHEL7 Base Package Repo",
+                    "gpgcheck": false,
+                    "name": "RHEL7_BASE"
+                }
+            },
+            "rhel8": {
+                "RHEL8_BASE": {
+                    "baseurl": "http://lxchwork1.hpetrlab.local/repository/rhel8_base/BaseOS/",
+                    "description": "RHEL8 Base Package Repo",
+                    "gpgcheck": false,
+                    "name": "RHEL8_BASE"
+                }
+            },
+            "ubuntu_focal": {
+                "focal": {
+                    "components": [
+                        "main",
+                        "restricted",
+                        "universe",
+                        "multiverse"
+                    ],
+                    "distribution": "focal",
+                    "name": "focal",
+                    "uri": "http://tr.archive.ubuntu.com/ubuntu"
+                },
+                "focal-security": {
+                    "components": [
+                        "main",
+                        "restricted",
+                        "universe",
+                        "multiverse"
+                    ],
+                    "distribution": "focal-security",
+                    "name": "focal-security",
+                    "uri": "http://tr.archive.ubuntu.com/ubuntu"
+                },
+                "focal-updates": {
+                    "components": [
+                        "main",
+                        "restricted",
+                        "universe",
+                        "multiverse"
+                    ],
+                    "distribution": "focal-updates",
+                    "name": "focal-updates",
+                    "uri": "http://tr.archive.ubuntu.com/ubuntu"
+                }
+            },
+            "ubuntu_jammy": {
+                "jammy": {
+                    "components": [
+                        "main",
+                        "restricted",
+                        "universe",
+                        "multiverse"
+                    ],
+                    "distribution": "jammy",
+                    "name": "jammy",
+                    "uri": "http://tr.archive.ubuntu.com/ubuntu"
+                },
+                "jammy-security": {
+                    "components": [
+                        "main",
+                        "restricted",
+                        "universe",
+                        "multiverse"
+                    ],
+                    "distribution": "jammy-security",
+                    "name": "jammy-security",
+                    "uri": "http://tr.archive.ubuntu.com/ubuntu"
+                },
+                "jammy-updates": {
+                    "components": [
+                        "main",
+                        "restricted",
+                        "universe",
+                        "multiverse"
+                    ],
+                    "distribution": "jammy-updates",
+                    "name": "jammy-updates",
+                    "uri": "http://tr.archive.ubuntu.com/ubuntu"
+                }
+            }
+        }
+    },
+    "sysctl": {
+        "kernel.msgmax": "8192",
+        "kernel.msgmnb": "65536",
+        "kernel.msgmni": "2878",
+        "kernel.panic_on_oops": "1",
+        "oracle   soft   memlock": "1425300000",
+        "root   soft   memlock": "1425300000"
+    },
+    "user": {
+        "add": {
+            "scom-adm": {
+                "action": "create",
+                "comment": "scom admin user",
+                "name": "scom-adm",
+                "nopasswd": "true",
+                "password": "$1$s0XkiWoV$NbZBf/fqXliuRm4SiC5rA1",
+                "shell": "/bin/bash",
+                "sudo_commands": [
+                    "/usr/bin/systemctl start firewalld",
+                    "/usr/bin/systemctl stop firewalld",
+                    "/usr/bin/systemctl status firewalld"
+                ]
+            },
+            "support": {
+                "action": "create",
+                "comment": "support user",
+                "name": "support",
+                "nopasswd": "true",
+                "password": "$1$s0XkiWoV$NbZBf/fqXliuRm4SiC5rA1",
+                "shell": "/bin/bash",
+                "sudo_commands": [
+                    "ALL"
+                ]
+            }
+        }
+    }
+}
